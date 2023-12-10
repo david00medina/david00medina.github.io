@@ -1,0 +1,22 @@
+<!-- One -->
+<section id="one" class="wrapper style1 special">
+	<div class="inner">
+		<header class="major">
+			<h2>What is this space about?</h2>
+			<p>Welcome to a digital haven for project enthusiasts!</p>
+			<p>Here, I've compiled a diverse range of resources spanning cybersecurity, AI, programming, mathematics, robotics, electronics, and the fascinating field of bioinformatics.
+				Whether you're a beginner or an expert, there's something tailored for everyone.
+				Immerse yourself in the world of cybersecurity challenges, explore the wonders of AI,
+				refine your coding skills, delve into the beauty of mathematics, or embark on exciting projects in robotics and electronics.
+				For those intrigued by the life sciences, our bioinformatics projects provide a unique blend of biology and data analysis.</p>
+			<p>What sets this space apart is its commitment to interactive learning, a sense of community, and regular updates to keep you on the pulse of technology.
+				Join me on this personal journey into the realm of projects, where innovation and implementation seamlessly converge.</p>
+			<p>Let's kickstart our project adventure!</p>
+		</header>
+		<ul class="icons major">
+			{% for section in site.sections %}
+			<li><a href="{{ section.url }}"><span class="icon my-icon {{ section.css_logo }} major"><span class="label">{{ section.tile }}</span></span></a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>

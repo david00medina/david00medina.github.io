@@ -23,6 +23,7 @@ GEM
     commonmarker (0.23.10)
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
+    digest (3.1.1)
     dnsruby (1.70.0)
       simpleidn (~> 0.2.1)
     drb (2.2.0)
@@ -39,6 +40,8 @@ GEM
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
+    faraday-retry (2.2.0)
+      faraday (~> 2.0)
     ffi (1.16.3)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
@@ -96,9 +99,14 @@ GEM
     html-pipeline (2.14.3)
       activesupport (>= 2)
       nokogiri (>= 1.4)
+    htmlentities (4.3.4)
     http_parser.rb (0.8.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
+    jektex (0.1.1)
+      digest (~> 3.1.1, >= 3.1.1)
+      execjs (~> 2.1, >= 2.9.1)
+      htmlentities (~> 4.3, >= 4.3.4)
     jekyll (3.9.3)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -112,6 +120,8 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
+    jekyll-archives (2.2.1)
+      jekyll (>= 3.6, < 5.0)
     jekyll-avatar (0.7.0)
       jekyll (>= 3.0, < 5.0)
     jekyll-coffeescript (1.1.1)
@@ -199,6 +209,8 @@ GEM
     jekyll-theme-time-machine (0.2.0)
       jekyll (> 3.5, < 5.0)
       jekyll-seo-tag (~> 2.0)
+    jekyll-timeago (0.15.0)
+      mini_i18n (>= 0.8.0)
     jekyll-titles-from-headings (0.5.3)
       jekyll (>= 3.3, < 5.0)
     jekyll-watch (2.2.1)
@@ -211,11 +223,20 @@ GEM
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
+    libv8-node (18.16.0.0-x86_64-linux)
     liquid (4.0.4)
+    liquid_pluralize (1.0.3)
+      liquid (>= 2.6, < 5.0)
+    liquid_reading_time (1.1.3)
+      liquid (>= 2.6, < 5.0)
+      nokogiri (~> 1.6)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
+    mini_i18n (0.9.0)
+    mini_racer (0.8.0)
+      libv8-node (~> 18.16.0.0)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
@@ -259,18 +280,28 @@ GEM
       unf_ext
     unf_ext (0.0.9.1)
     unicode-display_width (1.8.0)
+    webrick (1.8.1)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  faraday-retry
   github-pages (~> 228)
   http_parser.rb (~> 0.6.0)
+  jektex
+  jekyll-archives
   jekyll-feed (~> 0.12)
+  jekyll-timeago
+  jemoji
+  liquid_pluralize
+  liquid_reading_time (~> 1.1, >= 1.1.3)
+  mini_racer
   minima (~> 2.5)
   tzinfo (>= 1, < 3)
   tzinfo-data
   wdm (~> 0.1.1)
+  webrick (~> 1.8)
 
 BUNDLED WITH
    2.4.22

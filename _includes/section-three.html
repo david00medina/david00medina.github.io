@@ -1,0 +1,19 @@
+<!-- Three -->
+<section id="three" class="wrapper style3 special">
+	<div class="inner">
+		<header class="major">
+			<h2>Explore posts by category</h2>
+			<p>Discover all the posts published of a certain category.</p>
+		</header>
+		<ul class="features">
+			{% for section in site.sections %}
+			<li>
+				<a href="{{ section.url }}">
+					<h3 id="{{ section.category_id }}"><object data="/assets/css/images/{{ section.image }}" height="32px"></object>  {{ section.title }}</h3>
+					<p>{{ section.content }}</p>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>

@@ -18,21 +18,81 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Sharvik World
+email: sharvik@sharvik.world
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+
+# Homepage tiles
+tiles-source: posts # accepts "posts" or "pages"
+tiles-count: 5
+
+# Misc settings
+featured-image-source:
+
+# Social settings
+500px_url:
+facebook_url:
+github_url: https://github.com/david00medina
+gitlab_url:
+googleplus_url:
+instagram_url:
+linkedin_url: https://www.linkedin.com/in/david-alberto-medina-medina-523a85188/
+pinterest_url:
+slack_url:
+youtube_url: https://youtube.com/@sharvik7523
+twitter_url: https://twitter.com/davidchanfly
 
 # Build settings
-theme: minima
+markdown: kramdown
+
+# Plugins
 plugins:
-  - jekyll-feed
+  - jektex
+  - jekyll-archives
+
+# Archives
+collections:
+  sections:
+    output: true
+    permalink: /section/:path/
+    order:
+      - cybersecurity-sanctuary.md
+      - ai-wonderland.md
+      - codecraft-corner.md
+      - math-marvels.md
+      - robotics-and-electronics-oasis.md
+      - genome-forge.md
+
+
+# Jekyll archives
+jekyll-archives:
+  enabled:
+    - categories
+    - year
+  layouts:
+    year: archive-year
+    category: archive-category
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+
+
+# Page listing order
+page_order:
+  - Home
+  - Categories
+  - Archive
+  - Donate
+  - Contact
+  - About
 
 # Exclude from processing.
 # The following items will not be processed, by default.

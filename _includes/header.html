@@ -1,0 +1,27 @@
+<!-- Page Wrapper -->
+<div id="page-wrapper">
+
+	<!-- Header -->
+	<header id="header" {% if page.layout == 'default' %} class="alt" {% endif %}>
+		<h1><a href="{{ "" | absolute_url }}">Sharvik World</a></h1>
+		<nav id="nav">
+			<ul>
+				<li class="special">
+					<a href="#menu" class="menuToggle"><span>Menu</span></a>
+					<div id="menu">
+						<ul>
+							{% for sort_item in site.page_order %}
+								{% for page in site.pages %}
+									{% if sort_item == page.title %}
+										{% if page.layout == "default" or page.layout == "category" or page.layout == "page" %}
+										<li><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
+										{% endif %}
+									{% endif %}
+								{% endfor %}
+							{% endfor %}
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
