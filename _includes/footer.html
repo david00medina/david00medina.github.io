@@ -2,7 +2,7 @@
 <footer id="footer">
 	<ul class="icons">
 		{% if site.twitter_url %}
-		<li><a href="{{ site.twitter_url }}" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+		<li><a href="{{ site.twitter_url }}" class="icon fa-x-twitter" target="_blank"><span class="label">Twitter</span></a></li>
 		{% endif %} {% if site.googleplus_url %}
 		<li><a href="{{ site.googleplus_url }}" class="icon fa-google-plus" target="_blank"><span class="label">Google+</span></a></li>
 		{% endif %} {% if site.facebook_url %}
@@ -24,6 +24,9 @@
 		{% endif %}
 		{% if site.youtube_url %}
 		<li><a href="{{ site.youtube_url }}" class="icon fa-youtube" target="_blank"><span class="label">YouTube</span></a></li>
+		{% endif %}
+		{% if site.twitch_url %}
+		<li><a href="{{ site.twitch_url }}" class="icon fa-twitch" target="_blank"><span class="label">Twitch</span></a></li>
 		{% endif %}
 	</ul>
 	<ul class="copyright">
