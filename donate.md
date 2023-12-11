@@ -6,12 +6,12 @@ permalink: /donate/
 
 <ul class="features">
     <li>
-        <a class="paypal-subscribe" href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6SP66253NK602924TMV2TXHI">
+        <a id="paypal-subscribe" class="donate" href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6SP66253NK602924TMV2TXHI">
             <h3 id="paypal"><object data="/assets/css/images/paypal.svg" height="32px"></object>  PayPal</h3>
         </a>
     </li>
     <li>
-        <a class="buy-me-a-coffee" href="https://www.buymeacoffee.com/sharvik">
+        <a id="buy-me-a-coffee" class="donate" href="https://www.buymeacoffee.com/sharvik">
             <h3 id="buymeacoffee"><object data="/assets/css/images/coffee.svg" height="32px"></object>  Buy me a coffee</h3>
         </a>
     </li>
